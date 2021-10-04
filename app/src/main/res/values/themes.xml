@@ -22,7 +22,16 @@
     </style>
 
     <style name="button_login" parent="@style/Widget.MaterialComponents.Button">
-        <item name="backgroundTint"> blue</item>
+        <item name="backgroundTint"> @color/purple_700</item>
+    </style>
 
+    <style name="dashboard_values" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="dashboard_labels" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
     </style>
 </resources>
