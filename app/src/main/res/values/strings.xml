@@ -9,4 +9,9 @@
     <string name="login_esqueci">Esqueci a senha</string>
     <string name="login_nao_tem_conta">Não tem uma conta?</string>
     <string name="login_criar_conta">Criar uma conta agora</string>
+    <string name="novo_usuario_nome">Nome</string>
+    <string name="novo_usuario_altura">Altura</string>
+    <string name="novo_usuario_profissao">Profissão</string>
+    <string name="novo_usuario_nascimento">Data de nascimento</string>
+
 </resources>
