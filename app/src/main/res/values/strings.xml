@@ -13,5 +13,11 @@
     <string name="novo_usuario_altura">Altura</string>
     <string name="novo_usuario_profissao">Profissão</string>
     <string name="novo_usuario_nascimento">Data de nascimento</string>
+    <string name="novo_usuario_sexo">Sexo</string>
+    <string name="novo_usuario_feminino">Femimino</string>
+    <string name="novo_usuario_masculino">Masculino</string>
+    <string name="trocar_foto">Trocar foto</string>
+    <string name="dados_para_autentica">Dados para autenticação</string>
+    <string name="dados_pessoais">Dados pessoais</string>
 
 </resources>

@@ -34,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Trocar foto"
+                android:text="@string/trocar_foto"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 android:textColor="@color/purple_700"
                 android:layout_gravity="center"/>
@@ -55,56 +55,123 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/lock_24"
                     android:drawableTint="@color/purple_700"
-                    android:text="Dados para autenticação"
+                    android:text="@string/dados_para_autentica"
                     android:drawablePadding="8dp"
                     android:gravity="center_vertical"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
-                <EditText
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:hint="@string/login_et_email"
-                    android:paddingStart="12dp"/>
+                    app:boxBackgroundColor="@color/white">
 
-                <EditText
+                    <EditText
+                        android:id="@+id/edit_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingStart="12dp"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:hint="@string/login_et_senha"
-                    android:paddingStart="12dp"/>
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/edit_senha"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingStart="12dp"
+                        android:inputType="textPassword"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="13dp"
-                    android:drawableStart="@drawable/lock_24"
+                    android:drawableStart="@drawable/person_24"
                     android:drawableTint="@color/purple_700"
-                    android:text="Dados para autenticação"
+                    android:text="@string/dados_pessoais"
                     android:drawablePadding="8dp"
                     android:gravity="center_vertical"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
-                <EditText
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:hint="@string/novo_usuario_nome"
-                    android:paddingStart="12dp"/>
+                    app:boxBackgroundColor="@color/white">
 
-                <EditText
+                    <EditText
+                        android:id="@+id/edit_nome"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingStart="12dp"
+                        android:inputType="textCapWords"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:hint="@string/novo_usuario_profissao"
-                    android:paddingStart="12dp"/>
+                    app:boxBackgroundColor="@color/white">
 
-                <EditText
+                    <EditText
+                        android:id="@+id/edit_profissao"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingStart="12dp"
+                        android:inputType="textCapWords"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:hint="@string/novo_usuario_altura"
-                    android:paddingStart="12dp"/>
-                <EditText
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/edit_altura"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingStart="12dp"
+                        android:inputType="numberDecimal"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:hint="@string/novo_usuario_nascimento"
-                    android:paddingStart="12dp"/>
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/edit_data_nascimento"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingStart="12dp"
+                        android:inputType="date"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/novo_usuario_sexo"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -112,22 +179,26 @@
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/radio_feminino"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Feminino">
+                        android:text="@string/novo_usuario_feminino">
 
                     </RadioButton>
 
                     <RadioButton
+                        android:id="@+id/radio_masculino"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Feminino">
+                        android:text="@string/novo_usuario_masculino">
 
                     </RadioButton>
+
                 </RadioGroup>
 
-
-
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
 
             </LinearLayout>
 
