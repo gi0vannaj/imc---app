@@ -29,6 +29,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/tv_dash_nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Michele obama"
@@ -36,6 +37,7 @@
             android:textColor="@color/white"
             android:layout_gravity="center"/>
         <TextView
+            android:id="@+id/tv_dash_profissao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Advogada"
@@ -48,6 +50,7 @@
             android:layout_marginTop="10dp">
 
             <TextView
+                android:id="@+id/tv_dash_imc"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -55,6 +58,7 @@
                 android:gravity="center"
                 android:textAppearance="@style/dashboard_values"/>
             <TextView
+                android:id="@+id/tv_dash_ndc"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -62,6 +66,7 @@
                 android:gravity="center"
                 android:textAppearance="@style/dashboard_values"/>
             <TextView
+                android:id="@+id/tv_dash_idade"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -69,6 +74,7 @@
                 android:gravity="center"
                 android:textAppearance="@style/dashboard_values"/>
             <TextView
+                android:id="@+id/tv_dash_peso"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -76,6 +82,7 @@
                 android:gravity="center"
                 android:textAppearance="@style/dashboard_values"/>
             <TextView
+                android:id="@+id/tv_dash_altura"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"

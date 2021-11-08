@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
 import android.widget.RadioButton
+import android.widget.Toast
 import java.util.*
 
 class NovoUsuarioActivity : AppCompatActivity() {
@@ -80,7 +81,24 @@ class NovoUsuarioActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(validarCampos()){
-            //gravar od dados
+            //gravar os dados no sharedPreferences
+
+             //Criando um arquivo xml chamado "usuario"
+                 //se o arquivo ja existir ele
+            val arquivo = getSharedPreferences("usuario", MODE_PRIVATE)
+            val editor = arquivo.edit()
+
+            editor.putString("email", editEmail.text.toString())
+            editor.putString("senha", editSenha.text.toString())
+            editor.putString("nome", editNome.text.toString())
+            editor.putString("profissao", editProfissao.text.toString())
+            editor.putFloat("altura", editAltura.text.toString().toFloat())
+            editor.putString("nascimento",editDataNascimento.text.toString())
+            editor.putString("sexo",if(radioMasculino.isChecked) "M" else "F")
+            editor.apply()
+
+            Toast.makeText(this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT).show()
+            finish()
         }else{
             //grava nada
         }
@@ -101,6 +119,23 @@ class NovoUsuarioActivity : AppCompatActivity() {
             editSenha.error = "Senha é obrigatorio"
             valido = false
         }
+        if(editNome.text.isEmpty()){
+            editNome.error = "Nome é obrigatorio"
+            valido = false
+        }
+        if(editAltura.text.isEmpty()){
+            editAltura.error = "Altura é obrigatorio"
+            valido = false
+        }
+        if(editDataNascimento.text.isEmpty()){
+            editDataNascimento.error = "A data de nascimento é obrigatorio"
+            valido = false
+        }
+        if(!radioFeminino.isChecked && !radioMasculino.isChecked){
+            radioMasculino.error = "Genero é obrigatorio"
+            valido = false
+        }
+
 
         return valido
     }

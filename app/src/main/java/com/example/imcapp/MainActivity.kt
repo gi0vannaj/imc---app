@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,13 +16,35 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar!!.hide()
 
+
         val buttonEntrar = findViewById<Button>(R.id.button_entar)
         val buttonNovaConta= findViewById<Button>(R.id.button_nova_conta)
 
-        buttonEntrar.setOnClickListener{
-            val abrirDashBoard = Intent(this, DashBordActivity::class.java)
-            startActivity(abrirDashBoard)
+        val editEmail = findViewById<EditText>(R.id.edit_login_email)
+        val editSenha = findViewById<EditText>(R.id.edit_login_senha)
 
+        val arquivo = getSharedPreferences("usuario", MODE_PRIVATE)
+
+
+        buttonEntrar.setOnClickListener {
+
+            val arquivo = getSharedPreferences("usuario", MODE_PRIVATE)
+
+            // Recupera o email e senha de dentro do arquivo
+            val email = arquivo.getString("email", "")
+            val senha = arquivo.getString("senha", "")
+
+            if(email == editEmail.text.toString() && senha == editSenha.text.toString()){
+                val abrirDashBoard = Intent(this, DashBordActivity::class.java)
+                startActivity(abrirDashBoard)
+            }else{
+                Toast.makeText(this, "Senha ou usuário incorretos", Toast.LENGTH_SHORT).show()
+            }
+
+            //Toast.makeText(this, "Senha ou usuário incorretos", Toast.LENGTH_SHORT.toShort())
+
+            val abrirDashBoardActivity = Intent(this, DashBordActivity::class.java)
+            startActivity(abrirDashBoardActivity)
         }
 
         buttonNovaConta.setOnClickListener{
