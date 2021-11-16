@@ -7,6 +7,7 @@ import android.view.Menu
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.imcapp.utils.calcularIdade
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
 
 
         buttonEntrar.setOnClickListener {
+
+            calcularIdade("23-06-2004")
 
             val arquivo = getSharedPreferences("usuario", MODE_PRIVATE)
 
