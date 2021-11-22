@@ -162,6 +162,7 @@
                     android:layout_marginStart="8dp"/>
 
                 <LinearLayout
+                    android:id="@+id/pesar_agora"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_toEndOf="@id/iv_balanca"

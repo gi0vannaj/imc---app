@@ -16,7 +16,7 @@
     </style>
 
     <style name="titulo" parent="TextAppearance.MaterialComponents.Headline6">
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">28sp</item>
         <item name="android:textColor">#B2151515</item>
         <item name="android:textStyle">bold</item>
     </style>
