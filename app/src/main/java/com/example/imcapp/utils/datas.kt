@@ -30,4 +30,12 @@ fun calcularIdade(dataNascimento :String): Int {
 
     return 0
 
+
+}
+fun transformarData(dataFormatoAntigo:String):String{
+    val data = dataFormatoAntigo.split("/")
+
+    val dataAtual = data[2] + "/" + data[1] +"/" +  data[0]
+    return dataAtual
+
 }
