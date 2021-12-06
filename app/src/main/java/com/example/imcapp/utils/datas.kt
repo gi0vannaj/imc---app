@@ -33,7 +33,7 @@ fun calcularIdade(dataNascimento :String): Int {
 
 }
 fun transformarData(dataFormatoAntigo:String):String{
-    val data = dataFormatoAntigo.split("/")
+    val data = dataFormatoAntigo.split("-").toTypedArray()
 
     val dataAtual = data[2] + "/" + data[1] +"/" +  data[0]
     return dataAtual

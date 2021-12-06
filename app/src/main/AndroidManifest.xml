@@ -9,11 +9,12 @@
         android:roundIcon="@drawable/imc64"
         android:supportsRtl="true"
         android:theme="@style/Theme.ImcApp">
-        <activity android:name=".NovoUsuarioActivity"></activity>
-        <activity android:name=".DashBordActivity" />
-        <activity android:name=".MainActivity2" />
+        <activity android:name=".ui.registroPesoActivity2"></activity>
+        <activity android:name=".ui.RegistroPeso" />
+        <activity android:name=".ui.NovoUsuarioActivity" />
+        <activity android:name=".ui.DashBordActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

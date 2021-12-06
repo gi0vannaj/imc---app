@@ -125,12 +125,11 @@
 
     <Button
         android:id="@+id/registrar_peso"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registrar peso"
-        style="@style/Widget.MaterialComponents.Button"
-        android:layout_marginTop="18dp">
-    </Button>
+        android:layout_marginTop="18dp"
+        android:text="Registrar peso"></Button>
 
 
 </LinearLayout>

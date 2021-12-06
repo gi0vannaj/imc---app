@@ -1,12 +1,13 @@
-package com.example.imcapp
+package com.example.imcapp.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.imcapp.ui.NovoUsuarioActivity
+import com.example.imcapp.R
 import com.example.imcapp.utils.calcularIdade
 
 
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonNovaConta.setOnClickListener{
-            val abrirNovaConta= Intent(this,NovoUsuarioActivity::class.java)
+            val abrirNovaConta= Intent(this, NovoUsuarioActivity::class.java)
             startActivity(abrirNovaConta)
         }
 
